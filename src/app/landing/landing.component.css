@@ -1,0 +1,83 @@
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1{
+ color: yellow;
+ text-shadow: 2px 0 0 blue, -2px 0 0 blue, 0 2px 0 blue, 0 -2px 0 blue, 1px 1px blue, -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue;
+ font-family: "Dancing Script", cursive;
+ font-size: 450%;
+ font-weight: 600;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://scontent.fyyz1-1.fna.fbcdn.net/v/t1.0-9/29136474_1071126383028177_5431620044513357917_n.jpg?_nc_fx=fyto1-1&_nc_cat=0&oh=19f7330045c8b2ae0fa2f2aff3304351&oe=5BC9710B);
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://scontent.fyto1-1.fna.fbcdn.net/v/t1.0-9/38454799_1181882615285886_9123918280954740736_n.jpg?_nc_fx=fyto1-1&_nc_cat=0&oh=ead6aebcfd669bd4642bf2b79c30e28d&oe=5C02BC1C);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://www.sikhsewasocietytoronto.ca/wp-content/uploads/IMG_4240-1024x790.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://scontent.fyyz1-1.fna.fbcdn.net/v/t1.0-9/37175623_1157814791026002_5563343422808391680_n.jpg?_nc_fx=fyto1-1&_nc_cat=0&oh=17b724ba5ee8b9fa3f1797f895ff0b2a&oe=5BD0E8B2);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://scontent.fyto1-1.fna.fbcdn.net/v/t1.0-9/36793116_1150190888455059_6950962083865296896_n.jpg?_nc_fx=fyto1-1&_nc_cat=0&oh=dad88bb7fcc4e76becbe78ab451cd10c&oe=5BFD1328);
+  animation-delay: 40s; 
+}
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
